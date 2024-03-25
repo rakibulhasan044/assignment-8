@@ -3,6 +3,7 @@ import Home from '../pages/Home'
 import ListedBooks from "../pages/ListedBooks";
 import PagesRead from "../pages/PagesRead";
 import MainLayout from "../layout/MainLayout";
+import BooksCard from "../components/BooksCard";
 
 export const router = createBrowserRouter([
     {
@@ -11,7 +12,15 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/books.json'),
+                children: [
+                    {
+                        index: true,
+                        element: <BooksCard></BooksCard>,
+                        //loader: () => fetch('/books.json'),
+                    }
+                ]
               },
               {
                   path: "/listedbooks",
