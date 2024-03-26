@@ -12,7 +12,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><NavLink to="/" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Home</NavLink></li>
         <li><NavLink to="/listedbooks" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Listed Books</NavLink></li>
-        <li><NavLink to="pagesread" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Pages to Read</NavLink></li>
+        <li><NavLink to="/pagestoread" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Pages to Read</NavLink></li>
       </ul>
     </div>
     <p className="text-xl font-bold">Book Vibe</p>
@@ -21,7 +21,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
     <li><NavLink to="/" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Home</NavLink></li>
         <li><NavLink to="/listedbooks" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Listed Books</NavLink></li>
-        <li><NavLink to="pagestoread" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Pages to Read</NavLink></li>
+        <li><NavLink to="/pagestoread" className={({isActive}) => isActive? 'text-primary font-bold' : 'font-bold'}>Pages to Read</NavLink></li>
     </ul>
   </div>
   <div className=" flex gap-2 md:gap-5 navbar-end text-white">
