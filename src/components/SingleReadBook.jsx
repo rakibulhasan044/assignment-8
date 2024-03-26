@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiPagesLine } from "react-icons/ri";
 import { IoPeopleSharp } from "react-icons/io5";
-const SingleWiseBook = ({ book }) => {
+const SingleReadBook = ({ book }) => {
   const {
     image,
     bookName,
@@ -59,8 +59,8 @@ const SingleWiseBook = ({ book }) => {
   );
 };
 
-SingleWiseBook.propTypes = {
+SingleReadBook.propTypes = {
   book: PropTypes.object,
 };
 
-export default SingleWiseBook;
+export default SingleReadBook;
