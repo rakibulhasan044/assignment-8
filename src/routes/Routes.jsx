@@ -1,37 +1,36 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from '../pages/Home'
+import Home from "../pages/Home";
 import ListedBooks from "../pages/ListedBooks";
 import PagesRead from "../pages/PagesRead";
 import MainLayout from "../layout/MainLayout";
-import BooksCard from "../components/BooksCard";
+import BookDetails from "../pages/BookDetails";
+import Errorpage from "../pages/Errorpage";
 
 export const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <MainLayout />,
+    loader: () => fetch("/books.json"),
+    errorElement: <Errorpage/>,
+    children: [
+      {
         path: "/",
-        element: <MainLayout/>,
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>,
-                loader: () => fetch('/books.json'),
-                children: [
-                    {
-                        index: true,
-                        element: <BooksCard></BooksCard>,
-                        //loader: () => fetch('/books.json'),
-                    }
-                ]
-              },
-              {
-                  path: "/listedbooks",
-                  element: <ListedBooks></ListedBooks>
-              },
-              {
-                  path: "pagestoread",
-                  element: <PagesRead></PagesRead>
-              }
-        ]
-    }
-
-  ]);
-  
+        element: <Home />,
+        loader: () => fetch("/books.json"),
+      },
+      {
+        path: "/listedbooks",
+        element: <ListedBooks />,
+      },
+      {
+        path: "/pagestoread",
+        element: <PagesRead />,
+      },
+      {
+        path: "/bookdetails/:bookId",
+        element: <BookDetails />,
+        loader: () => fetch("/books.json"),
+      }
+    ],
+  },
+]);

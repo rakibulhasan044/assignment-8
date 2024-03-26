@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { FaRegStar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const SingleBook = ({ books }) => {
-  const { image, bookName, author, rating, tags, category } = books;
+  const { bookId, image, bookName, author, rating, tags, category } = books;
   return (
-    <div className=" shadow-xl p-5 space-y-4">
+    <Link to={`/bookdetails/${bookId}`} className=" shadow-xl p-5 space-y-4 border-2 rounded-xl">
       <figure className="flex items-center justify-center bg-slate-100 rounded-xl">
         <img className="h-[180px] w-[140px] my-5 " src={image} />
       </figure>
@@ -19,7 +20,7 @@ const SingleBook = ({ books }) => {
         <p>{category}</p>
         <p className="flex gap-5 items-center"><span>{rating}</span> <FaRegStar size={20}/></p>
       </div>
-    </div>
+    </Link>
   );
 };
 
