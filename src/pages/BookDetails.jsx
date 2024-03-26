@@ -19,13 +19,13 @@ const BookDetails = () => {
 
   const handleWishList = () => {
     const readItem = getItemFromRead();
-    const check = readItem.find(item => item !== idInt)
-    if(check) {
+    const isExist = readItem.find(item => item === idInt)
+    if(!isExist) {
       saveItemToWish(idInt);
       console.log('wish');
     }
     else {
-      toast.error('Item already read')
+      return toast.error('Book already read')
     }
   }
 

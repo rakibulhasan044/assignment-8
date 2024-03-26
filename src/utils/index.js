@@ -13,12 +13,11 @@ const saveItemToRead = id => {
     if(!isExist) {
         storedItem.push(id);
         localStorage.setItem('read', JSON.stringify(storedItem));
-        toast.success('Book Successfully added')
+        toast.success('Book Successfully added to read list')
     } else {
-        return toast.error('Book can not be added')
+        return toast.error('Book already added to read')
     }
 }
-//
 
 const getItemFromWish = () =>{
     const storedItem = localStorage.getItem('wish');
@@ -33,9 +32,9 @@ const saveItemToWish = id => {
     if(!isExist) {
         storedItem.push(id);
         localStorage.setItem('wish', JSON.stringify(storedItem));
-        toast.success('Book Successfully added')
+        toast.success('Book Successfully added to wishlist')
     } else {
-        return toast.error('Book can not be added')
+        return toast.error('Book already added to wishlist')
     }
 }
 
