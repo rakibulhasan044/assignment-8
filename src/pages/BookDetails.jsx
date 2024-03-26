@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveItemToLS } from "../utils";
+import { getItemFromRead, saveItemToRead, saveItemToWish } from "../utils";
+import toast from "react-hot-toast";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -11,13 +12,26 @@ const BookDetails = () => {
   const {image, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating, bookName} = book;
 
   const handleAddList = () => {
-    saveItemToLS(idInt);
+    saveItemToRead(idInt);
+    
     console.log('add');
   }
 
   const handleWishList = () => {
-    console.log('wish');
+    const readItem = getItemFromRead();
+    const check = readItem.find(item => item !== idInt)
+    if(check) {
+      saveItemToWish(idInt);
+      console.log('wish');
+    }
+    else {
+      toast.error('Item already read')
+    }
   }
+
+  // const checkWishList = (id) => {
+  //   const read = getItemFromRead();
+  // }
  
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 px-3">

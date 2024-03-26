@@ -1,19 +1,42 @@
+import toast from "react-hot-toast";
 
-
-const getItemFromLS = () =>{
-    const storedItem = localStorage.getItem('books');
+const getItemFromRead = () =>{
+    const storedItem = localStorage.getItem('read');
     if(storedItem) {
         return JSON.parse(storedItem)
     }
     return [];
 }
-const saveItemToLS = id => {
-    const storedItem = getItemFromLS();
+const saveItemToRead = id => {
+    const storedItem = getItemFromRead();
     const isExist = storedItem.find(bookId => bookId === id);
     if(!isExist) {
         storedItem.push(id);
-        localStorage.setItem('books', JSON.stringify(storedItem));
+        localStorage.setItem('read', JSON.stringify(storedItem));
+        toast.success('Book Successfully added')
+    } else {
+        return toast.error('Book can not be added')
+    }
+}
+//
+
+const getItemFromWish = () =>{
+    const storedItem = localStorage.getItem('wish');
+    if(storedItem) {
+        return JSON.parse(storedItem)
+    }
+    return [];
+}
+const saveItemToWish = id => {
+    const storedItem = getItemFromWish();
+    const isExist = storedItem.find(bookId => bookId === id);
+    if(!isExist) {
+        storedItem.push(id);
+        localStorage.setItem('wish', JSON.stringify(storedItem));
+        toast.success('Book Successfully added')
+    } else {
+        return toast.error('Book can not be added')
     }
 }
 
-export {getItemFromLS, saveItemToLS}
+export {getItemFromRead, saveItemToRead, saveItemToWish, getItemFromWish}
