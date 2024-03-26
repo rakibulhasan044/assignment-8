@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import pngwing from "../assets/pngwing.png";
 
 const Hero = () => {
@@ -8,9 +9,9 @@ const Hero = () => {
           Books to freshen up <br />
           your bookshelf
         </h1>
-        <button className="btn bg-[#23BE0A] text-xl text-white">
+        <Link to="/listedbooks" className="btn bg-[#23BE0A] text-xl text-white">
           View The List
-        </button>
+        </Link>
       </div>
       <img className="w-[318px] h-[394px]" src={pngwing} alt="" />
     </div>

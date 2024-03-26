@@ -10,7 +10,6 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    loader: () => fetch("/books.json"),
     errorElement: <Errorpage/>,
     children: [
       {
@@ -21,6 +20,7 @@ export const router = createBrowserRouter([
       {
         path: "/listedbooks",
         element: <ListedBooks />,
+        loader: () => fetch("/books.json"),
       },
       {
         path: "/pagestoread",

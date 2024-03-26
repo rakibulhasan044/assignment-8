@@ -1,4 +1,5 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import { saveItemToLS } from "../utils";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -9,6 +10,15 @@ const BookDetails = () => {
   console.log(book);
   const {image, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating, bookName} = book;
 
+  const handleAddList = () => {
+    saveItemToLS(idInt);
+    console.log('add');
+  }
+
+  const handleWishList = () => {
+    console.log('wish');
+  }
+ 
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 px-3">
       <div className="flex justify-center items-center bg-slate-100 p-10 sm:p-20 md:py-16 flex-1 rounded-xl">
@@ -47,8 +57,12 @@ const BookDetails = () => {
           <h1 className="font-bold mr-16">{rating}</h1>
         </div>
         <div className="flex gap-8">
-          <Link to="/listedbooks" className="text-white bg-[#50B1C9] px-4 py-2 rounded-2xl hover:bg-slate-300 hover:text-black">Read</Link>
-          <Link to="/listedbooks" className="text-white bg-[#50B1C9] px-4 py-2 rounded-2xl hover:bg-slate-300 hover:text-black">Wishlist</Link>
+          <button 
+          onClick={handleAddList}
+          className="text-white bg-[#50B1C9] px-4 py-2 rounded-2xl hover:bg-slate-300 hover:text-black">Read</button>
+          <button 
+          onClick={handleWishList}
+          className="text-white bg-[#50B1C9] px-4 py-2 rounded-2xl hover:bg-slate-300 hover:text-black">Wishlist</button>
         </div>
       </div>
     </div>
