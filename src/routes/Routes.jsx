@@ -7,6 +7,8 @@ import BookDetails from "../pages/BookDetails";
 import Errorpage from "../pages/Errorpage";
 import ReadBooks from "../components/ReadBooks";
 import WishBooks from "../components/WishBooks";
+import BestSellingBooks from "../pages/BestSellingBooks";
+import TopRatedBooks from "../pages/TopRatedBooks";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +48,16 @@ export const router = createBrowserRouter([
         element: <BookDetails />,
         loader: () => fetch("/books.json"),
       },
+      {
+        path: "/bestselling",
+        element: <BestSellingBooks/>,
+        loader: () => fetch("/books.json"),
+      },
+      {
+        path: "/toprated",
+        element: <TopRatedBooks/>,
+        loader: () => fetch("/books.json"),
+      }
     ],
   },
 ]);

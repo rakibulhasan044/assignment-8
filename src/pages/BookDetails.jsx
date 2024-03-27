@@ -28,10 +28,6 @@ const BookDetails = () => {
       return toast.error('Book already read')
     }
   }
-
-  // const checkWishList = (id) => {
-  //   const read = getItemFromRead();
-  // }
  
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 px-3">
