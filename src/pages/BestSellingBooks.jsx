@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
-// import SingleBook from "../components/SingleBook";
 import { useEffect, useState } from "react";
 import Best from "../components/Best";
 
@@ -10,7 +9,7 @@ const BestSellingBooks = () => {
 
   useEffect(() => {
     let sortedProducts = books.sort((a, b) => {
-      return b.cellCount - a.cellCount;
+      return b.sellCount - a.sellCount;
     });
     console.log(sortedProducts);
     setTop(sortedProducts);
@@ -23,7 +22,7 @@ const BestSellingBooks = () => {
         Here are our top 10 best selling mangas.
       </h1>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {top.slice(0, 9).map((p) => (
+        {top.slice(0, 10).map((p) => (
           <Best key={p.bookId} books={p}></Best>
         ))}
       </div>

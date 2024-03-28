@@ -8,18 +8,18 @@ const books = useLoaderData();
     const [top, setTop] = useState([]);
 
     useEffect(() => {
-        console.log(books)
-        const topBooks = books.filter(book => book.rating > 4.5);
-        setTop(topBooks);
-        console.log(topBooks)
-    },[books]); 
+      let sortedProducts = books.sort((a, b) => {
+        return b.rating - a.rating;
+      });
+      setTop(sortedProducts);
+    }, [books]);
 
   console.log(top)
   return (
     <div>
-      <h1 className="text-center text-5xl font-bold my-8"> Our Top Books Which Rating are Above 4.5</h1>
+      <h1 className="text-center text-3xl font-semibold my-8"> Our 10 top rated manga</h1>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {top.map((p) => (
+        {top.slice(0,10).map((p) => (
           <SingleBook key={p.bookId} books={p}></SingleBook>
         ))}
 

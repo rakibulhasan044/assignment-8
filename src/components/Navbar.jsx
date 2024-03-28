@@ -77,7 +77,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <p className="text-xl font-bold">Book Vibe</p>
+        <p className="text-xl font-bold">Manga Vibe</p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">

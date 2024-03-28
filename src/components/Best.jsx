@@ -28,7 +28,7 @@ const Best = ({ books }) => {
       <hr className="bg-slate-100 border-dotted" />
       <div className="flex justify-between items-center">
         <p>
-          {category} {sellCount}
+          {category}
         </p>
         <p className="flex gap-5 items-center">
           <span>{rating}</span> <FaRegStar size={20} />
