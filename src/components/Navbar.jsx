@@ -112,25 +112,25 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-              <NavLink
-                to="/bestselling"
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold" : "font-bold"
-                }
-              >
-                Best Selling
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/toprated"
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold" : "font-bold"
-                }
-              >
-                Top Rated
-              </NavLink>
-            </li>
+            <NavLink
+              to="/bestselling"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Best Selling
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/toprated"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Top Rated
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className=" flex gap-2 md:gap-5 navbar-end text-white">

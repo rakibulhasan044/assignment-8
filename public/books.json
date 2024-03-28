@@ -8,7 +8,7 @@
     "totalPages": 240,
     "rating": 4.6,
     "category": "Anime",
-    "tags": ["Action", "Adventure", "Supernatural"],
+    "tags": ["Action", "Supernatural"],
     "publisher": "Shueisha",
     "yearOfPublishing": 2019,
     "sellCount": 130032
@@ -22,7 +22,7 @@
     "totalPages": 220,
     "rating": 4.6,
     "category": "Anime",
-    "tags": ["Horror", "Supernatural", "Action"],
+    "tags": ["Supernatural", "Action"],
     "publisher": "Shueisha",
     "yearOfPublishing": 2014,
     "sellCount": 70234
@@ -36,7 +36,7 @@
     "totalPages": 200,
     "rating": 4.7,
     "category": "Anime",
-    "tags": ["Action", "Supernatural", "Horror"],
+    "tags": ["Action", "Supernatural"],
     "publisher": "Shueisha",
     "yearOfPublishing": 2020,
     "sellCount": 85432
@@ -50,7 +50,7 @@
     "totalPages": 190,
     "rating": 4.4,
     "category": "Anime",
-    "tags": ["Science Fiction", "Adventure", "Comedy"],
+    "tags": ["Science Fiction", "Comedy"],
     "publisher": "Pirate House",
     "yearOfPublishing": 2019,
     "sellCount": 30322
@@ -92,7 +92,7 @@
     "totalPages": 300,
     "rating": 4.2,
     "category": "Light Novel",
-    "tags": ["Fantasy", "Adventure", "Romance"],
+    "tags": ["Adventure", "Romance"],
     "publisher": "Studio A1",
     "yearOfPublishing": 2006,
     "sellCount": 20221
@@ -106,7 +106,7 @@
     "totalPages": 320,
     "rating": 4.0,
     "category": "Light Novel",
-    "tags": ["Science Fiction", "Virtual Reality", "Adventure"],
+    "tags": ["Virtual Reality", "Adventure"],
     "publisher": "ASCII Media Works",
     "yearOfPublishing": 2009,
     "sellCount": 40223
@@ -188,7 +188,7 @@
     "image": "https://comicvine.gamespot.com/a/uploads/scale_small/11/110017/8792312-000.jpg",
     "review": "Experience the eternal journey of an immortal hero as she seeks to understand the fleeting nature of life, friendship, and purpose.",
     "totalPages": 160,
-    "rating": 5.0,
+    "rating": 4.9,
     "category": "Manga",
     "tags": ["Fantasy", "Adventure"],
     "publisher": "Square Enix",

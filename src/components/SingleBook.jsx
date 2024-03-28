@@ -11,7 +11,7 @@ const SingleBook = ({ books }) => {
       <figure className="flex items-center justify-center bg-slate-100 rounded-xl">
         <img className="h-[180px] w-[140px] my-5 " src={image} />
       </figure>
-      <ul className="flex gap-8">
+      <ul className="flex gap-4">
         {tags.map((tag, idx) => (
           <li
             key={idx}

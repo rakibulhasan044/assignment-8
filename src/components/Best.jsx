@@ -9,11 +9,10 @@ const Best = ({ books }) => {
       to={`/bookdetails/${bookId}`}
       className=" shadow-xl p-5 space-y-4 border-2 rounded-xl"
     >
-      
       <figure className="flex items-center justify-center bg-slate-100 rounded-xl">
         <img className="h-[180px] w-[140px] my-5 " src={image} />
       </figure>
-      <ul className="flex gap-8">
+      <ul className="flex gap-4">
         {tags.map((tag, idx) => (
           <li
             key={idx}
@@ -27,16 +26,14 @@ const Best = ({ books }) => {
       <p className="font-medium">By: {author}</p>
       <hr className="bg-slate-100 border-dotted" />
       <div className="flex justify-between items-center">
-        <p>
-          {category}
-        </p>
+        <p>{category}</p>
         <p className="flex gap-5 items-center">
           <span>{rating}</span> <FaRegStar size={20} />
         </p>
       </div>
       <hr className="bg-slate-100 border-dotted" />
       <h3 className="text-2xl font-semibold text-center text-green-500">
-        Sold: {sellCount} prices
+        Sold: {sellCount} pieces
       </h3>
     </Link>
   );

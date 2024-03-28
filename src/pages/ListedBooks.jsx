@@ -5,10 +5,10 @@ export const AssetContext = createContext("all");
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
-  const [value, setValue] = useState('all')
+  const [value, setValue] = useState("all");
 
   return (
-    <div>
+    <div className="mb-5 px-3">
       <h1 className="text-3xl font-bold text-center my-10 bg-slate-100 rounded-xl py-10">
         Manga
       </h1>

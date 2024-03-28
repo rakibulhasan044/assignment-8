@@ -14,15 +14,13 @@ const books = useLoaderData();
       setTop(sortedProducts);
     }, [books]);
 
-  console.log(top)
   return (
-    <div>
+    <div className="mb-5 px-3">
       <h1 className="text-center text-3xl font-semibold my-8"> Our 10 top rated manga</h1>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {top.slice(0,10).map((p) => (
           <SingleBook key={p.bookId} books={p}></SingleBook>
         ))}
-
       </div>
     </div>
   );

@@ -22,8 +22,8 @@ const SingleWiseBook = ({ book }) => {
       <div className="card-body text-lg">
         <h2 className="card-title">{bookName}</h2>
         <p>By: {author}</p>
-        <div className="flex justify-center items-center gap-16">
-          <ul className="flex items-center gap-6">
+        <div className="flex flex-col md:flex-row  gap-2  md:gap-10">
+          <ul className="flex items-center gap-4">
             {tags.map((tag, idx) => (
               <li key={idx}>#{tag}</li>
             ))}
@@ -43,7 +43,7 @@ const SingleWiseBook = ({ book }) => {
           </p>
         </div>
         <hr className="border-b-2 border-dotted bg-slate-100" />
-        <div className="flex gap-6 lg:w-4/6 py-3">
+        <div className="flex gap-6 lg:w-5/6 py-3">
           <p className="px-3 py-2 text-semibold bg-blue-100 text-blue-500 rounded-3xl text-center">
             Category: {category}
           </p>

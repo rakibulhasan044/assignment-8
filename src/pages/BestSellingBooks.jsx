@@ -11,13 +11,11 @@ const BestSellingBooks = () => {
     let sortedProducts = books.sort((a, b) => {
       return b.sellCount - a.sellCount;
     });
-    console.log(sortedProducts);
     setTop(sortedProducts);
   }, [books]);
 
-  console.log(top);
   return (
-    <div>
+    <div className="mb-5 px-3">
       <h1 className="text-center text-3xl font-bold my-8">
         Here are our top 10 best selling mangas.
       </h1>

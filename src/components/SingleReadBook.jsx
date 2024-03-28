@@ -22,14 +22,14 @@ const SingleReadBook = ({ book }) => {
       <div className="card-body text-lg">
         <h2 className="card-title">{bookName}</h2>
         <p>By: {author}</p>
-        <div className="flex justify-center items-center gap-16">
-          <ul className="flex items-center gap-6">
+        <div className="flex flex-col md:flex-row  gap-2  md:gap-10">
+          <ul className="flex items-center gap-4">
             {tags.map((tag, idx) => (
               <li key={idx}>#{tag}</li>
             ))}
           </ul>
           <p className="flex gap-3 items-center">
-            <IoLocationOutline size={25} />
+            <IoLocationOutline size={20} />
             Year of Publishing: {yearOfPublishing}
           </p>
         </div>
